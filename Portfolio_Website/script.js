@@ -30,7 +30,8 @@ $('.scroll-up-button').click(function () {
 // MOBILE MENU ICON
 const menu = document.querySelector('#mobile-menu');
 const mobileMenu = document.querySelector('.navbar-menu');
-const links = [...document.querySelectorAll('.navbar-links')];
+const navLinks = [...document.querySelectorAll('.navbar-links')];
+const navButton = document.querySelector('.button');
 const navLogo = document.querySelector('#navbar-logo');
 
 const toggleMenu = () => {
@@ -38,9 +39,11 @@ const toggleMenu = () => {
     mobileMenu.classList.toggle('active');
 }
 
-links.forEach((link) => {
+navLinks.forEach((link) => {
     link.addEventListener('click', toggleMenu);
 });
+
+navButton.addEventListener('click', toggleMenu);
 
 menu.addEventListener('click', toggleMenu);
 
