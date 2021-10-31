@@ -1,35 +1,18 @@
 // Sticky navbar with scrolling function
 $(document).ready(function () {
-    if ($('.navbar-menu.active').is(':visible')) {
-        $('body').addClass("fixed-position");
-    } else {
-        $('body').removeClass("fixed-position");
-    }
-    // $(window).scroll(function () {
-    //     if (this.scrollY > 20) {
-    //         $('.navbar').addClass("sticky");
-    //     } else {
-    //         $('.navbar').removeClass("sticky");
-    //     }
-    //     if (this.scrollY > 500) {
-    //         $('.scroll-up-button').addClass("show");
-    //     } else {
-    //         $('.scroll-up-button').removeClass("show");
-    //     }
-    // })
+    $(window).scroll(function () {
+        if (this.scrollY > 20) {
+            $('.navbar').addClass("sticky");
+        } else {
+            $('.navbar').removeClass("sticky");
+        }
+        if (this.scrollY > 500) {
+            $('.scroll-up-button').addClass("show");
+        } else {
+            $('.scroll-up-button').removeClass("show");
+        }
+    })  
 });
-
-
-const navBar = document.querySelector('.navbar');
-const scroller = document.querySelector('.sticky');
-
-const scrollPage = () => {
-    if (this.scrollY > 20) {
-        navBar.addClass(scroller);
-    } else {
-        navBar.removeClass(scroller);
-    }
-}
 
 
 
@@ -40,6 +23,8 @@ $('.scroll-up-button').click(function () {
         scrollTop: 0
     });
 });
+
+
 
 
 // MOBILE MENU ICON
@@ -75,7 +60,7 @@ const highlightMenu = () => {
 
 
 
-// Type-writing Effect
+// TYPE-WRITING EFFECT
 
 // ES6 TypeWriter Class
 class TypeWriter {
@@ -150,6 +135,7 @@ function init() {
 
 
 
+
 // QUALIFICATION SECTION TABS
 (() => {
     const qualSection = document.querySelector(".qualification-content"),
@@ -175,6 +161,8 @@ function init() {
 
 
 
+
+// EMAIL SECTION FUNCTIONALITY
 
 // const mailName = document.querySelector("#emailName");
 // const mailUser = document.querySelector("#emailUser");

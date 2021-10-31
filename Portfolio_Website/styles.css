@@ -133,10 +133,7 @@ html {
     width: 100%;
     border: none;
     outline: none;
-    /* border-radius: 4px; */
-    /* background: #833ab4;
-    background: -webkit-linear-gradient(to right, #b29012, #c02525, #180606);
-    background: linear-gradient(to right, #b29012, #c02525, #180606); */
+    border-radius: 4px;
     color: #fff;
     transition: all 0.3s ease;
     font-family: 'Ubuntu', sans-serif;
@@ -167,7 +164,7 @@ html {
     text-align: center;
     line-height: 45px;
     color: #fff;
-    z-index: 9999;
+    /* z-index: 9999; */
     font-size: 30px;
     border-radius: 6px;
     cursor: pointer;
@@ -454,10 +451,11 @@ html {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .projects .projects-content .card {
+    margin: 0 15px;
     width: calc(33% - 25px);
     background: #222;
     text-align: center;
@@ -553,14 +551,15 @@ html {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: .5rem 2px;
-    font-size: .8rem;
+    padding: .5rem 1px;
+    font-size: .7rem;
 }
 
 .skills-box {
     padding: 1rem;
     color: #131313;
     cursor: pointer;
+    margin: 0 3rem;
 }
 
 .skills-box:hover > .skill-title:after, 
@@ -1056,10 +1055,12 @@ footer span a:hover {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    
 }
 
 .games .games-content .card {
+    margin: 0 30px;
     width: calc(33% - 25px);
     background: #222;
     text-align: center;
@@ -1249,6 +1250,22 @@ footer span a:hover {
 
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar.sticky .navbar-links {
+        color: #fff;
+    }
+
+    .navbar.sticky .navbar-links:hover {
+        color: #b29155;
+    }
+
+    .navbar.sticky .button {
+        color: #fff;
+    }
+
+    .navbar.sticky .button:hover {
+        color: #b29155;
     }
 
 }
