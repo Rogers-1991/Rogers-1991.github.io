@@ -1,7 +1,508 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"
+        integrity="sha512-cyAbuGborsD25bhT/uz++wPqrh5cqPh1ULJz4NSpN9ktWcA6Hnh9g+CWKeNx2R0fgQt+ybRXdabSBgYXkQTTmA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Colm Rogers Portfolio</title>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="scroll-up-button">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+
+    <!-- NAVBAR SECTION / HEADER -->
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#home" id="navbar-logo">Portfolio</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="#home" class="navbar-links">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#about" class="navbar-links">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#projects" class="navbar-links">Projects</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#skills" class="navbar-links">Skills</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#qualification" class="navbar-links">Qualifications</a>
+                </li>
+                <li class="navbar-button">
+                    <a href="#contact" class="button">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Hello, my name is</div>
+                <div class="text-2">Colm Rogers</div>
+                <h3 class="text-3">And I am a
+                    <span class="text-type" data-wait="1500" data-words='["Front End Developer", "Software&nbsp;Developer", "Audio&nbsp;Engineer", 
+                        "Video&nbsp;Editor", "Musician", "Content&nbsp;Creator"]'>
+                    </span>
+                </h3>
+                <a href="#projects">Explore</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">About Me</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="images/ColmRogersProfilePic.jpg" alt="profile picture">
+                </div>
+                <div class="column right">
+                    <h3 class="aboutText">Hello! My name is Colm Rogers</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut voluptatum eveniet doloremque
+                        autem excepturi eaque, sit laboriosam voluptatem nisi delectus. Facere explicabo hic minus
+                        accusamus alias fuga nihil dolorum quae. Explicabo illo unde, odio consequatur ipsam possimus
+                        veritatis, placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis
+                        beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non.</p>
+                    <a href="files/Amended_CV_01.09.2021.pdf" download="ColmRogers_Resume_2021">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+
+    <section class="projects" id="projects">
+        <div class="max-width">
+            <h2 class="title">My Projects</h2>
+            <div class="projects-content">
+                <div class="card">
+                    <div class="box">
+                        <a href="#">
+                            <i class="fas fa-video" id="projects-icon"></i>
+                            <div class="text">VFX and Animation</div>
+                            <p>Here are some logo animation designs I made for my freelance company, Rogers Sound!</p>
+                        </a>  
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <a href="games.html">
+                            <i class="fas fa-gamepad" id="projects-icon"></i>
+                            <div class="text">Mini Games</div>
+                            <p>Why not have a go at some of the web app games I created! Have fun!</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <a href="https://knuth.griffith.ie/~s3015806/website/">
+                            <i class="fas fa-globe" id="projects-icon"></i>
+                            <div class="text">Other Websites</div>
+                            <p>Here are some more front-end projects. Have a look at some other web apps I've designed!</p>
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SKILLS SECTION -->
+
+
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">My Skills</h2>
+            <h3 class="skillset-title">Software Developer Skills</h3>
+            <div class="skills-content">
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/html5.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>HTML 5</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/css.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>CSS 3</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/JavaScript.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/bootstrap.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>BootStrap 4</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/mysql.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>MySQL</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/php.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>PHP</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/java.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>Java</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/javafx.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>JavaFX</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+            </div>
+            <h3 class="skillset-title">Audio/Visual Post Production Skills</h3>
+            <div class="skills-content">
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/proTools.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>Avid Pro Tools</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/premierePro.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>Adobe Premiere Pro</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/afterEffects.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>Adobe After Effects</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/davinci.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>Davinci Resolve</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/photoshop.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>Adobe PhotoShop</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/audition.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>Adobe Audition</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/finalCut.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>Final Cut Pro</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+                <div class="skills-box">
+                    <div class="skill-title">
+                        <div class="image">
+                            <img src="Images/logicPro.png" alt="html5 image" class="skills-image">
+                        </div>
+                        <h3>Logic Pro</h3>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur<br> adipisicing elit. Iure, totam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- QUALIFICATIONS SECTION -->
+
+
+    <section class="qualification" id="qualification">
+        <div class="max-width">
+            <h2 class="title">My Qualifications</h2>
+            <div class="qualification-content">
+
+                <!-- QUALIFICATION TABS START -->
+                <div class="row">
+                    <div class="qual-tabs">
+                        <span class="tab-item active" data-target=".experience">Experience</span>
+                        <span class="tab-item" data-target=".education">Education</span>
+                    </div>
+                </div>
+
+                <!-- EXPERIENCE START -->
+                <div class="row">
+                    <div class="experience tab-content active">
+                        <div class="row">
+                            <div class="timeline">
+                                <div class="row">
+                                    <!-- timeline item start -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-inner outer-shadow">
+                                            <i class="fas fa-briefcase" id="exp-icon"></i>
+                                            <span>10.2016 - 04.2020</span>
+                                            <h3>Sound Supervisor, Designer / Video Editor</h3>
+                                            <h4>Freelance - Dublin, Ireland</h4>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                Mollitia dolores cupiditate, eaque quo deleniti eligendi
+                                                impedit dolorem repellat labore reiciendis.</p>
+                                        </div>
+                                    </div>
+                                    <!-- timeline item start -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-inner outer-shadow">
+                                            <i class="fas fa-briefcase" id="exp-icon"></i>
+                                            <span class="j1">01.2018 - 05.2018 / 01.2019 – 05.2019</span>
+                                            <h3>Contact Administrator <br>and Customer Care Representative</h3>
+                                            <h4>J1 Ireland – Roscommon, Ireland</h4>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                Mollitia dolores cupiditate, eaque quo deleniti eligendi
+                                                impedit dolorem repellat labore reiciendis.</p>
+                                        </div>
+                                    </div>
+                                    <!-- timeline item start -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-inner">
+                                            <i class="fas fa-briefcase" id="exp-icon"></i>
+                                            <span>06.2017 - 08.2017</span>
+                                            <h3>Sound Engineer Internship</h3>
+                                            <h4>Beacon Studios - Dublin, Ireland</h4>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                Mollitia dolores cupiditate, eaque quo deleniti eligendi
+                                                impedit dolorem repellat labore reiciendis.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EDUCATION START -->
+                <div class="row">
+                    <div class="education tab-content">
+                        <div class="row">
+                            <div class="timeline">
+                                <div class="row">
+                                    <!-- timeline item start -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-inner">
+                                            <i class="fas fa-graduation-cap" id="exp-icon"></i>
+                                            <span>2020 - 2021</span>
+                                            <h3>Science in Computing</h3>
+                                            <h4>Griffith College, Dublin, Ireland</h4>
+                                            <p>1st Class Honours Higher Diplona <br>
+                                                <br>Subjects Included:<br>
+                                                - Computer Programming <br>
+                                                - Discrete Mathematics <br>
+                                                - Computer Architecture & Organisation <br>
+                                                - Relational Databases <br>
+                                                - Data Communications & Networking <br>
+                                                - Software Engineering for Web Applications <br>
+                                                - HCI and HUI Programming <br>
+                                                - Object Oriented Development <br>
+                                                - Programming Data Structures <br>
+                                                - Operating System Design <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- timeline item start -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-inner outer-shadow">
+                                            <i class="fas fa-graduation-cap" id="exp-icon"></i>
+                                            <span class="j1">2016 - 2018</span>
+                                            <h3>Sound Engineering</h3>
+                                            <h4>Academy of Sound, Dublin, Ireland</h4>
+                                            <p>Level 1 Certificate:&ensp;Distinction</p>
+                                            <p>Level 2 Diploma:&ensp;Distinction</p>
+                                            <p>Level 3 Higher Diploma:&ensp;Distinction</p>
+                                            <p>Level 4 Higher Diploma:&ensp;Distinction</p>
+                                            <p>Mixing & Mastering Award (Beginner):&ensp;Distinction</p>
+                                            <p>Mixing & Mastering Award (Advanced):&ensp;Distinction</p>
+                                        </div>
+                                    </div>
+                                    <!-- timeline item start -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-inner outer-shadow">
+                                            <i class="fas fa-graduation-cap" id="exp-icon"></i>
+                                            <span>2014 - 2014</span>
+                                            <h3>Film Studies (Screenwriting, Genre Studies, Film Sound)</h3>
+                                            <h4>Beacon Studios - Dublin, Ireland</h4>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                Mollitia dolores cupiditate, eaque quo deleniti eligendi
+                                                impedit dolorem repellat labore reiciendis.</p>
+                                        </div>
+                                    </div>
+                                    <!-- timeline item start -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-item-inner outer-shadow">
+                                            <i class="fas fa-graduation-cap" id="exp-icon"></i>
+                                            <span>2010 - 2015</span>
+                                            <h3>Film Studies with English & Philosophy</h3>
+                                            <h4>National University of Ireland, Galway</h4>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                Mollitia dolores cupiditate, eaque quo deleniti eligendi
+                                                impedit dolorem repellat labore reiciendis.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Get in Touch</div>
+                    <p>If you have any questions, queries or just want to get in touch for a friendly chat, I would love to hear
+                        from you!
+                    </p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user" id="contact-icon"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="subtitle">Colm Rogers</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-house" id="contact-icon"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="subtitle">123 Privet Drive</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope" id="contact-icon"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="subtitle">colmrogers91@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Message Me</div>
+                    <form>
+                        <div class="fields" id="emailName">
+                            <div class="field name">
+                                <input type="text" placeholder="Name" required>
+                            </div>
+                            <div class="field email" id="emailUser">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Subject" id="emailSubject" required>
+                        </div>
+                        <div class="field textarea" id="message">
+                            <textarea name="emailMessage" id="emailMessage" cols="30" rows="10" placeholder="Message..."></textarea>
+                        </div>
+                        <div class="button2">
+                            <button class="sendBtn"><a id="submitInfo">Send Message</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="max-width">
+            <span>Created By <a href="#about">Colm Rogers</a> | <span class="far fa-copyright"></span>2021 All Rights
+                Reserved.</span>
+        </div>
+    </footer>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
