@@ -29,16 +29,20 @@ $('.scroll-up-button').click(function () {
 
 // MOBILE MENU ICON
 const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.navbar-menu');
+const mobileMenu = document.querySelector('.navbar-menu');
+const links = [...document.querySelectorAll('.navbar-links')];
 const navLogo = document.querySelector('#navbar-logo');
 
-const mobileMenu = () => {
+const toggleMenu = () => {
     menu.classList.toggle('is-active');
-    menuLinks.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
 }
 
-menu.addEventListener('click', mobileMenu);
+links.forEach((link) => {
+    link.addEventListener('click', toggleMenu);
+});
 
+menu.addEventListener('click', toggleMenu);
 
 const highlightMenu = () => {
     const elem = document.querySelector('.highlight')
