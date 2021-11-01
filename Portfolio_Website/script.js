@@ -11,7 +11,7 @@ $(document).ready(function () {
         } else {
             $('.scroll-up-button').removeClass("show");
         }
-    })  
+    })
 });
 
 

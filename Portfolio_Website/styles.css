@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto+Mono:ital,wght@0,500;0,600;0,700;1,400&display=swap');
 
 * {
     margin: 0;
@@ -90,6 +90,7 @@ html {
     cursor: pointer;
     text-decoration: none;
     font-size: 2.3rem;
+    font-family: 'Roboto+Mono', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .navbar-menu {
@@ -112,7 +113,7 @@ html {
     text-decoration: none;
     height: 100%;
     transition: all 0.3s ease;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto+Mono', sans-serif;
 }
 
 .navbar-button {
@@ -136,7 +137,7 @@ html {
     border-radius: 4px;
     color: #fff;
     transition: all 0.3s ease;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto+Mono', sans-serif;
 }
 
 .navbar-links:hover {
@@ -164,7 +165,7 @@ html {
     text-align: center;
     line-height: 45px;
     color: #fff;
-    /* z-index: 9999; */
+    z-index: 2;
     font-size: 30px;
     border-radius: 6px;
     cursor: pointer;
@@ -191,7 +192,7 @@ html {
     min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto+Mono', sans-serif;
 }
 
 .home .max-width {
@@ -302,7 +303,7 @@ html {
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto+Mono', sans-serif;
 }
 
 .about .title::before {
@@ -421,7 +422,7 @@ html {
     font-weight: 500;
     margin-bottom: 4rem;
     padding-bottom: 20px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto+Mono', sans-serif;
 }
 
 .projects .title::before {
@@ -517,7 +518,7 @@ html {
     font-weight: 500;
     margin-bottom: 4rem;
     padding-bottom: 20px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto+Mono', sans-serif;
 }
 
 .skills .title::before {
@@ -551,15 +552,15 @@ html {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: .5rem 1px;
-    font-size: .7rem;
+    padding: .5rem 2px;
 }
 
 .skills-box {
-    padding: 1rem;
+    padding: 1.2rem;
     color: #131313;
     cursor: pointer;
-    margin: 0 3rem;
+    margin: 0 2rem;
+    justify-content: center;
 }
 
 .skills-box:hover > .skill-title:after, 
@@ -575,7 +576,8 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.5rem;
+    justify-content: center;
+    padding: 0.4rem;
     margin-bottom: 0.5rem;
     position: relative;
 }
@@ -607,6 +609,8 @@ html {
 .skill-title h3 {
     color: #131313;
     margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
 }
 
 .skills-content .skills-image {
@@ -666,7 +670,7 @@ html {
     font-weight: 500;
     margin-bottom: 4rem;
     padding-bottom: 20px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto+Mono', sans-serif;
 }
 
 .qualification .title::before {
@@ -844,7 +848,7 @@ html {
     font-weight: 500;
     margin-bottom: 4rem;
     padding-bottom: 20px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto+Mono', sans-serif;
 }
 
 .contact .title::before {
@@ -1025,7 +1029,7 @@ footer span a:hover {
     font-weight: 500;
     margin-bottom: 4rem;
     padding-bottom: 20px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto+Mono', sans-serif;
 }
 
 .games .title::before {
