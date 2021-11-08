@@ -479,25 +479,26 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message Me</div>
-                    <form>
+                    <form action="https://formspree.io/f/xnqlkrwl" method="POST" id="my-form">
                         <div class="fields" id="emailName">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Name" name="fullName" required>
                             </div>
                             <div class="field email" id="emailUser">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" placeholder="Email" name="email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" id="emailSubject" required>
+                            <input type="text" placeholder="Subject" id="emailSubject" name="subject" required>
                         </div>
                         <div class="field textarea" id="message">
-                            <textarea name="emailMessage" id="emailMessage" cols="30" rows="10" placeholder="Message..."></textarea>
+                            <textarea name="emailMessage" id="emailMessage" cols="30" rows="10" placeholder="Message..." name="message"></textarea>
                         </div>
                         <div class="button2">
-                            <button class="sendBtn"><a id="submitInfo">Send Message</a></button>
+                            <button type="submit" class="sendBtn" name="submit"><a id="submitInfo">Send Message</a></button>
                         </div>
                     </form>
+                    <div id="status"></div>
                 </div>
             </div>
         </div>

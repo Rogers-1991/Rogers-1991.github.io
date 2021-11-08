@@ -171,24 +171,43 @@ function init() {
 
 // EMAIL SECTION FUNCTIONALITY
 
-// const mailName = document.querySelector("#emailName");
-// const mailUser = document.querySelector("#emailUser");
-const sendInformation = document.querySelector("#submitInfo");
-const mailSubject = document.querySelector("#emailSubject").value;
-const mailMessage = document.querySelector("#emailMessage").value;
+window.addEventListener("DOMContentLoaded", function () {
+    var form = document.getElementById("my-form");
+    var status = document.getElementById("status");
 
-const myEmail = 'mailto:colmrogers91@gmail.com'
+    function success() {
+        form.reset();
+        status.classList.add('success');
+        status.innerHTML = "Thanks! Message successfully sent!";
+    }
 
-sendInformation.addEventListener('click', (e) => {
+    function error() {
+        status.classList.add('error');
+        status.innerHTML = "Oops! There was a problem.";
+    }
 
-    const href = `${myEmail}?subject=${mailSubject}&body=${mailMessage}`
+    // handle form submission event
 
-    sendInformation.setAttribute("href", href);
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+    })
+});
 
-    console.log(href);
-})
+// helper function for sending ajax request
 
-// mailMessage.addEventListener('onchange', (e) => {
-
-//     mailMessage.value = 
-// })
+function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+        } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+        }
+    };
+    xhr.send(data);
+}
