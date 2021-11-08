@@ -330,7 +330,7 @@ html {
 
 .about .about-content .left img {
   width: 350px;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 6px;
   border: 0.2rem solid #b29155;
 }
