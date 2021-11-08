@@ -230,9 +230,6 @@ html {
 }
 
 .txt {
-  /* color: #b29155; */
-  /* background-color: #b29155; */
-  /* color: linear-gradient(to top, #b29012 0%, #c02525 100%); */
   background-color: #b29155;
   background-image: linear-gradient(to top, #b29012 0%, #c02525 100%);
   background-size: 100%;
@@ -332,10 +329,10 @@ html {
 }
 
 .about .about-content .left img {
-  height: 400px;
-  width: 400px;
+  width: 350px;
   object-fit: cover;
   border-radius: 6px;
+  border: 0.2rem solid #b29155;
 }
 
 .about .about-content .right {
@@ -1382,8 +1379,7 @@ footer span a:hover {
   }
 
   .about .about-content .left img {
-    height: 350px;
-    width: 350px;
+    width: 300px;
   }
 
   .max-width {
