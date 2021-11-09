@@ -1182,10 +1182,6 @@ footer span a:hover {
     font-size: 1.6rem;
   }
 
-  .fixed-position {
-    position: fixed;
-  }
-
   #navbar-logo {
     padding-left: 25px;
   }
@@ -1260,6 +1256,102 @@ footer span a:hover {
 
   .navbar.sticky .button:hover {
     color: #b29155;
+  }
+}
+
+@media screen and (max-height: 710px) {
+  .navbar-menu li {
+    height: 100px;
+    padding: 0 1.4rem;
+  }
+}
+
+@media screen and (max-height: 660px) {
+  .navbar-menu li {
+    height: 85px;
+    padding: 0 1.2rem;
+  }
+}
+
+@media screen and (max-height: 567px) {
+  .navbar-menu li {
+    height: 80px;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-height: 530px) {
+  .navbar-menu li {
+    height: 70px;
+    padding: 0 .7rem;
+  }
+
+  .navbar-links {
+    padding: 1rem;
+  }
+
+  .navbar-menu.active {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-height: 475px) {
+  .navbar-menu li {
+    height: 55px;
+    padding: 0 .7rem;
+  }
+
+  .navbar-links {
+    padding: 0.8rem;
+  }
+
+  .navbar-menu.active {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-height: 475px) {
+  .navbar-menu li {
+    height: 45px;
+    padding: 0.6rem;
+  }
+
+  .navbar-links {
+    padding: 0.65rem;
+  }
+
+  .navbar-menu.active {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-height: 320px) {
+  .navbar-menu li {
+    height: 40px;
+    padding: 0 .5rem;
+  }
+
+  .navbar-links {
+    padding: 0.3rem;
+  }
+
+  .navbar-menu.active {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-height: 281px) {
+  .navbar-menu li {
+    height: 35px;
+    padding: 0 .4rem;
+  }
+
+  .navbar-links {
+    padding: 0.3rem;
+  }
+
+  .navbar-menu.active {
+    font-size: 0.8rem;
   }
 }
 
@@ -1401,6 +1493,30 @@ footer span a:hover {
   }
 }
 
+@media (max-width: 348px) {
+  
+  .about .title::after {
+    bottom: -11px;
+    font-size: 12px;
+  }
+
+  .about .about-content .left img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 310px) {
+  
+  .about .title::after {
+    bottom: -9px;
+    font-size: 11px;
+  }
+
+  .about .about-content .left img {
+    width: 200px;
+  }
+}
+
 /* MOBILE PROJECTS SECTION */
 
 @media (max-width: 1104px) {
@@ -1439,6 +1555,30 @@ footer span a:hover {
   }
 }
 
+@media (max-width: 348px) {
+  .projects .title::after {
+    bottom: -11px;
+    font-size: 12px;
+  }
+
+  .projects .projects-content .card {
+    width: calc(80% - 5px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 310px) {
+  .projects .title::after {
+    bottom: -9px;
+    font-size: 11px;
+  }
+
+  .projects .projects-content .card {
+    width: calc(80% - 5px);
+    margin-bottom: 20px;
+  }
+}
+
 /* MOBILE SKILLS SECTION */
 
 @media (max-width: 1104px) {
@@ -1465,6 +1605,70 @@ footer span a:hover {
     transform: translateX(-50%);
   }
 }
+
+@media (max-width: 348px) {
+  .skills .title::after {
+    bottom: -11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 310px) {
+  .skills .title::after {
+    bottom: -9px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 462px) {
+  .skillset-title {
+    text-align: center;
+  }
+
+  .skills-box {
+    padding: 1rem;
+    margin: 0 1.2rem;
+  }
+
+  .skill-title h3 {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 398px) {
+  .skills-box {
+    padding: 0.7rem;
+    margin: 0 0.9rem;
+  }
+
+  .skill-title h3 {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 398px) {
+  .skills-box {
+    padding: 0.4rem;
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 398px) {
+  .skills-box {
+    padding: 0.14rem;
+    margin: 0 0.18rem;
+  }
+
+  .skill-title h3 {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+  }
+}
+
+
+
 
 /* MOBILE QUALIFICATIONS SECTION */
 
@@ -1632,6 +1836,22 @@ footer span a:hover {
   }
 }
 
+@media (max-width: 348px) {
+  
+  .qualification .title::after {
+    bottom: -11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 310px) {
+  
+  .qualification .title::after {
+    bottom: -9px;
+    font-size: 11px;
+  }
+}
+
 /* MOBILE CONTACT SECTION */
 
 @media screen and (max-width: 1104px) {
@@ -1670,6 +1890,20 @@ footer span a:hover {
   }
 }
 
+@media (max-width: 348px) {
+  .contact .title::after {
+    bottom: -11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 310px) {
+  .contact .title::after {
+    bottom: -9px;
+    font-size: 11px;
+  }
+}
+
 /* MOBILE GAMES SECTION */
 
 @media (max-width: 1104px) {
@@ -1690,7 +1924,7 @@ footer span a:hover {
   }
 
   .games .title::after {
-    content: "What I Provide";
+    content: "Have some Fun";
     position: absolute;
     bottom: -11px;
     left: 50%;
@@ -1710,5 +1944,19 @@ footer span a:hover {
 @media (max-width: 1088px) {
   .games .games-content .card {
     width: 100%;
+  }
+}
+
+@media (max-width: 348px) {
+  .games .title::after {
+    bottom: -11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 310px) {
+  .games .title::after {
+    bottom: -9px;
+    font-size: 11px;
   }
 }
