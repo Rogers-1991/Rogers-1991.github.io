@@ -1,541 +1,685 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"
-        integrity="sha512-cyAbuGborsD25bhT/uz++wPqrh5cqPh1ULJz4NSpN9ktWcA6Hnh9g+CWKeNx2R0fgQt+ybRXdabSBgYXkQTTmA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto+Mono:ital,wght@0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"
+      integrity="sha512-cyAbuGborsD25bhT/uz++wPqrh5cqPh1ULJz4NSpN9ktWcA6Hnh9g+CWKeNx2R0fgQt+ybRXdabSBgYXkQTTmA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Colm Rogers Portfolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="scroll-up-button">
-        <i class="fas fa-angle-up"></i>
+      <i class="fas fa-angle-up"></i>
     </div>
-
 
     <!-- NAVBAR SECTION / HEADER -->
 
     <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#home" id="navbar-logo">Portfolio</a>
-            <div class="navbar-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar-menu">
-                <li class="navbar-item">
-                    <a href="#home" class="navbar-links">Home</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#about" class="navbar-links">About</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#projects" class="navbar-links">Projects</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#skills" class="navbar-links">Skills</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#qualification" class="navbar-links">Qualifications</a>
-                </li>
-                <li class="navbar-button">
-                    <a href="#contact" class="button">Contact</a>
-                </li>
-            </ul>
+      <div class="navbar-container">
+        <a href="#home" id="navbar-logo">Portfolio</a>
+        <div class="navbar-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
+        <ul class="navbar-menu">
+          <li class="navbar-item">
+            <a href="#home" class="navbar-links">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#about" class="navbar-links">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#projects" class="navbar-links">Projects</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#skills" class="navbar-links">Skills</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#qualification" class="navbar-links">Qualifications</a>
+          </li>
+          <li class="navbar-button">
+            <a href="#contact" class="button">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- HOME SECTION -->
 
     <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Colm Rogers</div>
-                <h3 class="text-3">And I am a
-                    <span class="text-type" data-wait="1500" data-words='["Front End Developer", "Software&nbsp;Developer", "Audio&nbsp;Engineer", 
-                        "Video&nbsp;Editor", "Musician", "Content&nbsp;Creator"]'>
-                    </span>
-                </h3>
-                <a href="#projects">Explore</a>
-            </div>
+      <div class="max-width">
+        <div class="home-content">
+          <div class="text-1">Hello, my name is</div>
+          <div class="text-2">Colm Rogers</div>
+          <h3 class="text-3">
+            And I am a
+            <span
+              class="text-type"
+              data-wait="1500"
+              data-words='["Front End Developer", "Software&nbsp;Developer", "Audio&nbsp;Engineer", 
+                        "Video&nbsp;Editor", "Musician", "Content&nbsp;Creator"]'
+            >
+            </span>
+          </h3>
+          <a href="#projects">Explore</a>
         </div>
+      </div>
     </section>
 
     <!-- ABOUT SECTION -->
 
     <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title">About Me</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="Images/ColmRogersProfilePic2.JPG" alt="profile picture">
-                </div>
-                <div class="column right">
-                    <h3 class="aboutText">Hello! My name is Colm Rogers</h3>
-                    <p>Hardworking & achievement-oriented student recently graduated with a 1st Class 
-                        Honours Higher Diploma in Science in Computing. Honours graduate of Film Studies 
-                        with Arts from NUI Galway. Strong technical aptitude, with a 2:1 Honours standard in 
-                        English and writing, organisation and communication skills and a sincere passion for 
-                        learning more.
-                    </p>
-                    <a href="Files/Amended_CV_22.02.2021.pdf" download="Colm Rogers Resume 2021">Download CV</a>
-                </div>
-            </div>
+      <div class="max-width">
+        <h2 class="title">About Me</h2>
+        <div class="about-content">
+          <div class="column left">
+            <img src="Images/ColmRogersProfilePic2.JPG" alt="profile picture" />
+          </div>
+          <div class="column right">
+            <h3 class="aboutText">Hello! My name is Colm Rogers</h3>
+            <p>
+              Hardworking & achievement-oriented student recently graduated with
+              a 1st Class Honours Higher Diploma in Science in Computing.
+              Honours graduate of Film Studies with Arts from NUI Galway. Strong
+              technical aptitude, with a 2:1 Honours standard in English and
+              writing, organisation and communication skills and a sincere
+              passion for learning more.
+            </p>
+            <a
+              href="Files/Amended_CV_22.02.2021.pdf"
+              download="Colm Rogers Resume 2021"
+              >Download CV</a
+            >
+          </div>
         </div>
+      </div>
     </section>
-
 
     <!-- PROJECTS SECTION -->
 
     <section class="projects" id="projects">
-        <div class="max-width">
-            <h2 class="title">My Projects</h2>
-            <div class="projects-content">
-                <div class="card">
-                    <div class="box">
-                        <a href="games.html">
-                            <i class="fas fa-gamepad" id="projects-icon"></i>
-                            <div class="text">Mini Games</div>
-                            <p>Why not have a go at some of the web app games I created! Have fun!</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <a href="https://knuth.griffith.ie/~s3015806/website/">
-                            <i class="fas fa-globe" id="projects-icon"></i>
-                            <div class="text">Other Websites</div>
-                            <p>Here are some more front-end projects. Have a look at some other web apps I've designed!</p>
-                        </a> 
-                    </div>
-                </div>
+      <div class="max-width">
+        <h2 class="title">My Projects</h2>
+        <div class="projects-content">
+          <div class="card">
+            <div class="box">
+              <a href="games.html">
+                <i class="fas fa-gamepad" id="projects-icon"></i>
+                <div class="text">Mini Games</div>
+                <p>
+                  Why not have a go at some of the web app games I created! Have
+                  fun!
+                </p>
+              </a>
             </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <a href="https://knuth.griffith.ie/~s3015806/website/">
+                <i class="fas fa-globe" id="projects-icon"></i>
+                <div class="text">Other Websites</div>
+                <p>
+                  Here are some more front-end projects. Have a look at some
+                  other web apps I've designed!
+                </p>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-
 
     <!-- SKILLS SECTION -->
 
-
     <section class="skills" id="skills">
-        <div class="max-width">
-            <h2 class="title">My Skills</h2>
-            <h3 class="skillset-title">Software Developer Skills</h3>
-            <div class="skills-content">
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/html5.png" alt="html5 image" class="skills-image">
-                        </div>
-                        <h3>HTML</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/css.png" alt="css image" class="skills-image">
-                        </div>
-                        <h3>CSS 3</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/JavaScript.png" alt="JS image" class="skills-image">
-                        </div>
-                        <h3>JavaScript</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/reactImage.png" alt="React image" class="skills-image">
-                        </div>
-                        <h3>React</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/bootstrap.png" alt="BootStrap image" class="skills-image">
-                        </div>
-                        <h3>BootStrap 4</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/mysql.png" alt="MySQL image" class="skills-image">
-                        </div>
-                        <h3>MySQL</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/php.png" alt="PHP image" class="skills-image">
-                        </div>
-                        <h3>PHP</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/java.png" alt="Java image" class="skills-image">
-                        </div>
-                        <h3>Java</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/javafx.png" alt="JavaFX image" class="skills-image">
-                        </div>
-                        <h3>JavaFX</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/Tailwind_Image.png" alt="TailWind image" class="skills-image">
-                        </div>
-                        <h3>TailWind</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/nodejs_image.png" alt="Node.js image" class="skills-image">
-                        </div>
-                        <h3>Node.js</h3>
-                    </div>
-                </div>
+      <div class="max-width">
+        <h2 class="title">My Skills</h2>
+        <h3 class="skillset-title">Software Developer Skills</h3>
+        <div class="skills-content">
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/html5.png"
+                  alt="html5 image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>HTML</h3>
             </div>
-            <h3 class="skillset-title">Audio/Visual Post Production Skills</h3>
-            <div class="skills-content">
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/proTools.png" alt="Avid Pro Tools image" class="skills-image">
-                        </div>
-                        <h3>Avid Pro Tools</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/premierePro.png" alt="Premiere Pro image" class="skills-image">
-                        </div>
-                        <h3>Premiere Pro</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/afterEffects.png" alt="After Effects image" class="skills-image">
-                        </div>
-                        <h3>After Effects</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/davinci.png" alt="Davinci image" class="skills-image">
-                        </div>
-                        <h3>Davinci Resolve</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/photoshop.png" alt="PhotoShop image" class="skills-image">
-                        </div>
-                        <h3>PhotoShop</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/audition.png" alt="Audition image" class="skills-image">
-                        </div>
-                        <h3>Audition</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/finalCut.png" alt="Final Cut Pro image" class="skills-image">
-                        </div>
-                        <h3>Final Cut Pro</h3>
-                    </div>
-                </div>
-                <div class="skills-box">
-                    <div class="skill-title">
-                        <div class="image">
-                            <img src="Images/logicPro.png" alt="Logic Pro image" class="skills-image">
-                        </div>
-                        <h3>Logic Pro</h3>
-                    </div>
-                </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/css.png"
+                  alt="css image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>CSS 3</h3>
             </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/JavaScript.png"
+                  alt="JS image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>JavaScript</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/reactImage.png"
+                  alt="React image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>React</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/bootstrap.png"
+                  alt="BootStrap image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>BootStrap 4</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/mysql.png"
+                  alt="MySQL image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>MySQL</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/php.png"
+                  alt="PHP image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>PHP</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/java.png"
+                  alt="Java image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>Java</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/javafx.png"
+                  alt="JavaFX image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>JavaFX</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/Tailwind_Image.png"
+                  alt="TailWind image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>TailWind</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/nodejs_image.png"
+                  alt="Node.js image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>Node.js</h3>
+            </div>
+          </div>
         </div>
+        <h3 class="skillset-title">Audio/Visual Post Production Skills</h3>
+        <div class="skills-content">
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/proTools.png"
+                  alt="Avid Pro Tools image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>Avid Pro Tools</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/premierePro.png"
+                  alt="Premiere Pro image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>Premiere Pro</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/afterEffects.png"
+                  alt="After Effects image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>After Effects</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/davinci.png"
+                  alt="Davinci image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>Davinci Resolve</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/photoshop.png"
+                  alt="PhotoShop image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>PhotoShop</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/audition.png"
+                  alt="Audition image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>Audition</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/finalCut.png"
+                  alt="Final Cut Pro image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>Final Cut Pro</h3>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skill-title">
+              <div class="image">
+                <img
+                  src="Images/logicPro.png"
+                  alt="Logic Pro image"
+                  class="skills-image"
+                />
+              </div>
+              <h3>Logic Pro</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
 
     <!-- QUALIFICATIONS SECTION -->
 
-
     <section class="qualification" id="qualification">
-        <div class="max-width">
-            <h2 class="title">My Qualifications</h2>
-            <div class="qualification-content">
-
-                <!-- QUALIFICATION TABS START -->
-                <div class="row">
-                    <div class="qual-tabs">
-                        <span class="tab-item active" data-target=".experience">Experience</span>
-                        <span class="tab-item" data-target=".education">Education</span>
-                    </div>
-                </div>
-
-                <!-- EXPERIENCE START -->
-                <div class="row">
-                    <div class="experience tab-content active">
-                        <div class="row">
-                            <div class="timeline">
-                                <div class="row">
-                                    <!-- timeline item start -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <i class="fas fa-briefcase" id="exp-icon"></i>
-                                            <span>10.2016 - 04.2020</span>
-                                            <h3>Sound Supervisor, Designer / Video Editor</h3>
-                                            <h4>Freelance - Dublin, Ireland</h4>
-                                            <p>
-                                                Supervised entire post-production process of projects, including audio, 
-                                                visual, VFX and colour. 
-                                            </p>
-                                            <p>
-                                                Arranged production meetings and supervised projects sent to different 
-                                                production houses.
-                                            </p>
-                                            <p>
-                                                Worked in all audio post-production departments, provided video edit, and 
-                                                supervised Colour, VFX and Music.
-                                            </p>
-                                            <p>
-                                                Recorded and mixed sound on-location.
-                                            </p>
-                                            <p>
-                                                Created and managed a data library of 
-                                                audio/video files for feature projects.
-                                            </p>
-                                            <p>
-                                                Transcoded raw video footage to low-resolution proxies for editing.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item start -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <i class="fas fa-briefcase" id="exp-icon"></i>
-                                            <span class="j1">01.2018 - 05.2018 / 01.2019 – 05.2019</span>
-                                            <h3>Contact Administrator <br>and Customer Care Representative</h3>
-                                            <h4>J1 Ireland – Roscommon, Ireland</h4>
-                                            <p>
-                                                Designed and implemented an application monitoring system, which enabled 
-                                                the business to meet its target of completing over 300 outstanding 
-                                                applications, while simultaneously managing new applications helping to 
-                                                reach all project goals on time.
-                                            </p>
-                                            <p>
-                                                Secured over 30 US jobs by meeting and negotiating with owner of Bubba 
-                                                Gump Shrimp in Chicago.
-                                            </p>
-                                            <p>
-                                                Contacted US Visa Sponsors and applicants daily regarding completed 
-                                                application forms.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item start -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner">
-                                            <i class="fas fa-briefcase" id="exp-icon"></i>
-                                            <span>06.2017 - 08.2017</span>
-                                            <h3>Sound Engineer Internship</h3>
-                                            <h4>Beacon Studios - Dublin, Ireland</h4>
-                                            <p>
-                                                Provided a Sound Effects mix and final mix on #Navan2030 promo ad for 
-                                                Irish national TV personality, Hector Ó hEochagáin.
-                                            </p>
-                                            <p>
-                                                Answered the phone at reception, took down bookings and inquiries.
-                                            </p>
-                                            <p>
-                                                Shadowed sessions with clients.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- EDUCATION START -->
-                <div class="row">
-                    <div class="education tab-content">
-                        <div class="row">
-                            <div class="timeline">
-                                <div class="row">
-                                    <!-- timeline item start -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner">
-                                            <i class="fas fa-graduation-cap" id="exp-icon"></i>
-                                            <span>2020 - 2021</span>
-                                            <h3>Science in Computing</h3>
-                                            <h4>Griffith College, Dublin, Ireland</h4>
-                                            <p>1st Class Honours Higher Diplona <br>
-                                                <br>Subjects Included:<br>
-                                                - Computer Programming <br>
-                                                - Discrete Mathematics <br>
-                                                - Computer Architecture & Organisation <br>
-                                                - Relational Databases <br>
-                                                - Data Communications & Networking <br>
-                                                - Software Engineering for Web Applications <br>
-                                                - HCI and HUI Programming <br>
-                                                - Object Oriented Development <br>
-                                                - Programming Data Structures <br>
-                                                - Operating System Design <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item start -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <i class="fas fa-graduation-cap" id="exp-icon"></i>
-                                            <span class="j1">2016 - 2018</span>
-                                            <h3>Sound Engineering</h3>
-                                            <h4>Academy of Sound, Dublin, Ireland</h4>
-                                            <p>Level 1 Certificate:&ensp;Distinction</p>
-                                            <p>Level 2 Diploma:&ensp;Distinction</p>
-                                            <p>Level 3 Higher Diploma:&ensp;Distinction</p>
-                                            <p>Level 4 Higher Diploma:&ensp;Distinction</p>
-                                            <p>Mixing & Mastering Award (Beginner):&ensp;Distinction</p>
-                                            <p>Mixing & Mastering Award (Advanced):&ensp;Distinction</p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item start -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <i class="fas fa-graduation-cap" id="exp-icon"></i>
-                                            <span>2014 - 2014</span>
-                                            <h3>Film Studies (Screenwriting, Genre Studies, Film Sound, Curatorial Internship at Pacific Film Archive)</h3>
-                                            <h4>UC Berkeley - California, USA</h4>
-                                            <p>3.67 / 4 GPA <br>
-                                                <br>Subjects Included:<br>
-                                                - Screenwriting <br>
-                                                - Genre Studies (Horror and Science Fiction) <br>
-                                                - Film Sound (with 4-time Academy Award Winner, Prof. Mark Berger) <br>
-                                                - Film Curator Internship at Pacific Film Archive <br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- timeline item start -->
-                                    <div class="timeline-item">
-                                        <div class="timeline-item-inner outer-shadow">
-                                            <i class="fas fa-graduation-cap" id="exp-icon"></i>
-                                            <span>2010 - 2015</span>
-                                            <h3>Film Studies with English & Philosophy</h3>
-                                            <h4>National University of Ireland, Galway</h4>
-                                            <p>2nd Class Honours BA Connect Degree</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="max-width">
+        <h2 class="title">My Qualifications</h2>
+        <div class="qualification-content">
+          <!-- QUALIFICATION TABS START -->
+          <div class="row">
+            <div class="qual-tabs">
+              <span class="tab-item active" data-target=".experience"
+                >Experience</span
+              >
+              <span class="tab-item" data-target=".education">Education</span>
             </div>
+          </div>
+
+          <!-- EXPERIENCE START -->
+          <div class="row">
+            <div class="experience tab-content active">
+              <div class="row">
+                <div class="timeline">
+                  <div class="row">
+                    <!-- timeline item start -->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner outer-shadow">
+                        <i class="fas fa-briefcase" id="exp-icon"></i>
+                        <span>10.2016 - 04.2020</span>
+                        <h3>Sound Supervisor, Designer / Video Editor</h3>
+                        <h4>Freelance - Dublin, Ireland</h4>
+                        <p>
+                          Supervised entire post-production process of projects,
+                          including audio, visual, VFX and colour.
+                        </p>
+                        <p>
+                          Arranged production meetings and supervised projects
+                          sent to different production houses.
+                        </p>
+                        <p>
+                          Worked in all audio post-production departments,
+                          provided video edit, and supervised Colour, VFX and
+                          Music.
+                        </p>
+                        <p>Recorded and mixed sound on-location.</p>
+                        <p>
+                          Created and managed a data library of audio/video
+                          files for feature projects.
+                        </p>
+                        <p>
+                          Transcoded raw video footage to low-resolution proxies
+                          for editing.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- timeline item start -->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner outer-shadow">
+                        <i class="fas fa-briefcase" id="exp-icon"></i>
+                        <span class="j1"
+                          >01.2018 - 05.2018 / 01.2019 – 05.2019</span
+                        >
+                        <h3>
+                          Contact Administrator <br />and Customer Care
+                          Representative
+                        </h3>
+                        <h4>J1 Ireland – Roscommon, Ireland</h4>
+                        <p>
+                          Designed and implemented an application monitoring
+                          system, which enabled the business to meet its target
+                          of completing over 300 outstanding applications, while
+                          simultaneously managing new applications helping to
+                          reach all project goals on time.
+                        </p>
+                        <p>
+                          Secured over 30 US jobs by meeting and negotiating
+                          with owner of Bubba Gump Shrimp in Chicago.
+                        </p>
+                        <p>
+                          Contacted US Visa Sponsors and applicants daily
+                          regarding completed application forms.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- timeline item start -->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner">
+                        <i class="fas fa-briefcase" id="exp-icon"></i>
+                        <span>06.2017 - 08.2017</span>
+                        <h3>Sound Engineer Internship</h3>
+                        <h4>Beacon Studios - Dublin, Ireland</h4>
+                        <p>
+                          Provided a Sound Effects mix and final mix on
+                          #Navan2030 promo ad for Irish national TV personality,
+                          Hector Ó hEochagáin.
+                        </p>
+                        <p>
+                          Answered the phone at reception, took down bookings
+                          and inquiries.
+                        </p>
+                        <p>Shadowed sessions with clients.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EDUCATION START -->
+          <div class="row">
+            <div class="education tab-content">
+              <div class="row">
+                <div class="timeline">
+                  <div class="row">
+                    <!-- timeline item start -->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner">
+                        <i class="fas fa-graduation-cap" id="exp-icon"></i>
+                        <span>2020 - 2021</span>
+                        <h3>Science in Computing</h3>
+                        <h4>Griffith College, Dublin, Ireland</h4>
+                        <p>
+                          1st Class Honours Higher Diplona <br />
+                          <br />Subjects Included:<br />
+                          - Computer Programming <br />
+                          - Discrete Mathematics <br />
+                          - Computer Architecture & Organisation <br />
+                          - Relational Databases <br />
+                          - Data Communications & Networking <br />
+                          - Software Engineering for Web Applications <br />
+                          - HCI and HUI Programming <br />
+                          - Object Oriented Development <br />
+                          - Programming Data Structures <br />
+                          - Operating System Design <br />
+                        </p>
+                      </div>
+                    </div>
+                    <!-- timeline item start -->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner outer-shadow">
+                        <i class="fas fa-graduation-cap" id="exp-icon"></i>
+                        <span class="j1">2016 - 2018</span>
+                        <h3>Sound Engineering</h3>
+                        <h4>Academy of Sound, Dublin, Ireland</h4>
+                        <p>Level 1 Certificate:&ensp;Distinction</p>
+                        <p>Level 2 Diploma:&ensp;Distinction</p>
+                        <p>Level 3 Higher Diploma:&ensp;Distinction</p>
+                        <p>Level 4 Higher Diploma:&ensp;Distinction</p>
+                        <p>
+                          Mixing & Mastering Award (Beginner):&ensp;Distinction
+                        </p>
+                        <p>
+                          Mixing & Mastering Award (Advanced):&ensp;Distinction
+                        </p>
+                      </div>
+                    </div>
+                    <!-- timeline item start -->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner outer-shadow">
+                        <i class="fas fa-graduation-cap" id="exp-icon"></i>
+                        <span>2014 - 2014</span>
+                        <h3>
+                          Film Studies (Screenwriting, Genre Studies, Film
+                          Sound, Curatorial Internship at Pacific Film Archive)
+                        </h3>
+                        <h4>UC Berkeley - California, USA</h4>
+                        <p>
+                          3.67 / 4 GPA <br />
+                          <br />Subjects Included:<br />
+                          - Screenwriting <br />
+                          - Genre Studies (Horror and Science Fiction) <br />
+                          - Film Sound (with 4-time Academy Award Winner, Prof.
+                          Mark Berger) <br />
+                          - Film Curator Internship at Pacific Film Archive
+                          <br />
+                        </p>
+                      </div>
+                    </div>
+                    <!-- timeline item start -->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner outer-shadow">
+                        <i class="fas fa-graduation-cap" id="exp-icon"></i>
+                        <span>2010 - 2015</span>
+                        <h3>Film Studies with English & Philosophy</h3>
+                        <h4>National University of Ireland, Galway</h4>
+                        <p>2nd Class Honours BA Connect Degree</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- CONTACT SECTION -->
 
-
     <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact Me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>If you have any questions, queries or just want to get in touch for a friendly chat, I would love to hear
-                        from you!
-                    </p>
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user" id="contact-icon"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="subtitle">Colm Rogers</div>
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <i class="fas fa-envelope" id="contact-icon"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="subtitle">colmrogers91@gmail.com</div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="max-width">
+        <h2 class="title">Contact Me</h2>
+        <div class="contact-content">
+          <div class="column left">
+            <div class="text">Get in Touch</div>
+            <p>
+              If you have any questions, queries or just want to get in touch
+              for a friendly chat, I would love to hear from you!
+            </p>
+            <div class="icons">
+              <div class="row">
+                <i class="fas fa-user" id="contact-icon"></i>
+                <div class="info">
+                  <div class="head">Name</div>
+                  <div class="subtitle">Colm Rogers</div>
                 </div>
-                <div class="column right">
-                    <div class="text">Message Me</div>
-                    <form action="https://formspree.io/f/xnqlkrwl" method="POST" id="my-form">
-                        <div class="fields" id="emailName">
-                            <div class="field name">
-                                <input type="text" placeholder="Name" name="fullName" required>
-                            </div>
-                            <div class="field email" id="emailUser">
-                                <input type="email" placeholder="Email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subject" id="emailSubject" name="subject" required>
-                        </div>
-                        <div class="field textarea" id="message">
-                            <textarea name="emailMessage" id="emailMessage" cols="30" rows="10" placeholder="Message..." name="message"></textarea>
-                        </div>
-                        <div class="button2">
-                            <button type="submit" class="sendBtn" name="submit"><a id="submitInfo">Send Message</a></button>
-                        </div>
-                    </form>
-                    <div id="status"></div>
+              </div>
+              <div class="row">
+                <i class="fas fa-envelope" id="contact-icon"></i>
+                <div class="info">
+                  <div class="head">Email</div>
+                  <div class="subtitle">colmrogers91@gmail.com</div>
                 </div>
+              </div>
             </div>
+          </div>
+          <div class="column right">
+            <div class="text">Message Me</div>
+            <form
+              action="https://formspree.io/f/xnqlkrwl"
+              method="POST"
+              id="my-form"
+            >
+              <div class="fields" id="emailName">
+                <div class="field name">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    name="fullName"
+                    required
+                  />
+                </div>
+                <div class="field email" id="emailUser">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  id="emailSubject"
+                  name="subject"
+                  required
+                />
+              </div>
+              <div class="field textarea" id="message">
+                <textarea
+                  name="emailMessage"
+                  id="emailMessage"
+                  cols="30"
+                  rows="10"
+                  placeholder="Message..."
+                  name="message"
+                ></textarea>
+              </div>
+              <div class="button2">
+                <button type="submit" class="sendBtn" name="submit">
+                  <a id="submitInfo">Send Message</a>
+                </button>
+              </div>
+            </form>
+            <div id="status"></div>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer>
-        <div class="max-width">
-            <span>Created By <a href="#about">Colm Rogers</a> | <span class="far fa-copyright"></span>2021 All Rights
-                Reserved.</span>
-        </div>
+      <div class="max-width">
+        <span
+          >Created By <a href="#about">Colm Rogers</a> |
+          <span class="far fa-copyright"></span>2021 All Rights Reserved.</span
+        >
+      </div>
     </footer>
-    
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script src="script.js"></script>
-</body>
 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
