@@ -1555,7 +1555,7 @@ footer span a:hover {
   }
 }
 
-@media (max-width: 357px) {
+@media (max-width: 359px) {
   .projects .title::after {
     bottom: -9px;
     font-size: 11px;
@@ -1566,12 +1566,6 @@ footer span a:hover {
     margin-bottom: 20px;
   }
 }
-
-@media (max-width: 310px) {
-  .projects .title::after {
-    bottom: -9px;
-    font-size: 11px;
-  }
 
   .projects .projects-content .card {
     width: calc(80% - 5px);
