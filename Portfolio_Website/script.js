@@ -1,75 +1,45 @@
-// Sticky navbar with scrolling function
+// script.js — Updated for Modern Use & Page-Safe Execution
+
+// Sticky navbar on scroll
 $(document).ready(function () {
     $(window).scroll(function () {
-        if (this.scrollY > 20) {
-            $('.navbar').addClass("sticky");
-        } else {
-            $('.navbar').removeClass("sticky");
-        }
-        if (this.scrollY > 500) {
-            $('.scroll-up-button').addClass("show");
-        } else {
-            $('.scroll-up-button').removeClass("show");
-        }
-    })
-});
+        $('.navbar').toggleClass("sticky", this.scrollY > 20);
+        $('.scroll-up-button').toggleClass("show", this.scrollY > 500);
+    });
 
-
-
-
-// SLIDE-UP SCRIPT
-$('.scroll-up-button').click(function () {
-    $('html').animate({
-        scrollTop: 0
+    // Slide-up scroll button
+    $('.scroll-up-button').click(function () {
+        $('html').animate({ scrollTop: 0 });
     });
 });
 
-
-
-
-// MOBILE MENU ICON
+// Mobile Navigation Menu Toggle
 const menu = document.querySelector('#mobile-menu');
 const mobileMenu = document.querySelector('.navbar-menu');
 const navLinks = [...document.querySelectorAll('.navbar-links')];
 const navButton = document.querySelector('.button');
-const navLogo = document.querySelector('#navbar-logo');
 
 const toggleMenu = () => {
-    menu.classList.toggle('is-active');
-    mobileMenu.classList.toggle('active');
-}
+    menu?.classList.toggle('is-active');
+    mobileMenu?.classList.toggle('active');
+};
 
 navLinks.forEach((link) => {
-    link.addEventListener('click', toggleMenu);
+    link?.addEventListener('click', toggleMenu);
 });
 
-navButton.addEventListener('click', toggleMenu);
+navButton?.addEventListener('click', toggleMenu);
+menu?.addEventListener('click', toggleMenu);
 
-menu.addEventListener('click', toggleMenu);
-
+// Highlight menu (partially disabled for simplicity)
 const highlightMenu = () => {
-    const elem = document.querySelector('.highlight')
-    const homeMenu = document.querySelector('#home')
-    const about = document.querySelector('#about')
-    const service = document.querySelector('#project')
-    const skills = document.querySelector('#skills')
-    const qual = document.querySelector('#qualification')
-    const contact = document.querySelector('#contact')
-
-    let scrollPos = window.scrollY
-
-    // adds 'highlight' class to menu items
-    if (window.innerWidth > 1104 && scrollPos < 600) {
-        homeMenu.classList.add('highlight')
+    const homeMenu = document.querySelector('#home');
+    if (window.innerWidth > 1104 && window.scrollY < 600) {
+        homeMenu?.classList.add('highlight');
     }
-}
+};
 
-
-
-
-// TYPE-WRITING EFFECT
-
-// ES6 TypeWriter Class
+// TypeWriter Effect
 class TypeWriter {
     constructor(txtElement, words, wait = 1500) {
         this.txtElement = txtElement;
@@ -77,49 +47,27 @@ class TypeWriter {
         this.txt = '';
         this.wordIndex = 0;
         this.wait = parseInt(wait, 10);
-        this.type();
         this.isDeleting = false;
+        this.type();
     }
 
-    // Create a method within the class, called 'type'
     type() {
-        // Current index of word
         const current = this.wordIndex % this.words.length;
-        // Get full text of current word
         const fullTxt = this.words[current];
 
-        console.log(fullTxt);
+        this.txt = this.isDeleting ? fullTxt.substring(0, this.txt.length - 1)
+                                   : fullTxt.substring(0, this.txt.length + 1);
 
-        // Check if deleting
-        if (this.isDeleting) {
-            // Remove Character
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-            // Add Character
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        // Insert txt into element
         this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
-        // Initial Type Speed
-        let typeSpeed = 75;
+        let typeSpeed = this.isDeleting ? 37 : 75;
 
-        if (this.isDeleting) {
-            typeSpeed /= 2;
-        }
-
-        // Check if the word is complete
         if (!this.isDeleting && this.txt === fullTxt) {
-            // Make Pause at end
             typeSpeed = this.wait;
-            // Set delete to True
             this.isDeleting = true;
         } else if (this.isDeleting && this.txt === '') {
             this.isDeleting = false;
-            // Move to the next word
             this.wordIndex++;
-            // Pause before start typing
             typeSpeed = 500;
         }
 
@@ -127,53 +75,39 @@ class TypeWriter {
     }
 }
 
-// Init on DOM Load
-document.addEventListener('DOMContentLoaded', init);
-
-// Init App
-function init() {
+document.addEventListener('DOMContentLoaded', () => {
     const txtElement = document.querySelector('.text-type');
+    if (!txtElement) return;
     const words = JSON.parse(txtElement.getAttribute('data-words'));
     const wait = txtElement.getAttribute('data-wait');
-
-    // initialise typewriter
     new TypeWriter(txtElement, words, wait);
-}
+});
 
-
-
-
-// QUALIFICATION SECTION TABS
+// Qualification Tabs Toggle
 (() => {
-    const qualSection = document.querySelector(".qualification-content"),
-        tabsContainer = document.querySelector(".qual-tabs");
+    const qualSection = document.querySelector(".qualification-content");
+    const tabsContainer = document.querySelector(".qual-tabs");
+
+    if (!qualSection || !tabsContainer) return;
 
     tabsContainer.addEventListener("click", (event) => {
-        /* if event.target contains 'tab-item' class and doesn't contain 'active' class */
         if (event.target.classList.contains("tab-item") &&
             !event.target.classList.contains("active")) {
             const target = event.target.getAttribute("data-target");
-            // deactivate existing active 'tab-item'
-            tabsContainer.querySelector(".active").classList.remove("active");
-            // activate new 'tab-item'
+            tabsContainer.querySelector(".active")?.classList.remove("active");
             event.target.classList.add("active");
-            // deactivate existing active 'tab-content'
-            qualSection.querySelector(".tab-content.active").classList.remove("active");
-            // activate new 'tab-content'
-            qualSection.querySelector(target).classList.add("active");
+            qualSection.querySelector(".tab-content.active")?.classList.remove("active");
+            qualSection.querySelector(target)?.classList.add("active");
         }
-    })
+    });
 })();
 
+// Email Form Submission
+window.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("my-form");
+    const status = document.getElementById("status");
 
-
-
-
-// EMAIL SECTION FUNCTIONALITY
-
-window.addEventListener("DOMContentLoaded", function () {
-    var form = document.getElementById("my-form");
-    var status = document.getElementById("status");
+    if (!form || !status) return;
 
     function success() {
         form.reset();
@@ -186,28 +120,21 @@ window.addEventListener("DOMContentLoaded", function () {
         status.innerHTML = "Oops! There was a problem.";
     }
 
-    // handle form submission event
-
     form.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var data = new FormData(form);
+        const data = new FormData(form);
         ajax(form.method, form.action, data, success, error);
-    })
+    });
 });
 
-// helper function for sending ajax request
-
 function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
     xhr.open(method, url);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = function () {
         if (xhr.readyState !== XMLHttpRequest.DONE) return;
-        if (xhr.status === 200) {
-            success(xhr.response, xhr.responseType);
-        } else {
-            error(xhr.status, xhr.response, xhr.responseType);
-        }
+        xhr.status === 200 ? success(xhr.response, xhr.responseType)
+                           : error(xhr.status, xhr.response, xhr.responseType);
     };
     xhr.send(data);
 }

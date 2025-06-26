@@ -1003,134 +1003,219 @@ footer span a:hover {
   text-decoration: underline;
 }
 
-/* GAMES SECTION */
-
-.gamesBody {
-  background: url("Images/PortfolioHomeBackground.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: static;
-}
-
-.games {
+/* Tutorial Video Projects Section Styles */
+.videos {
+  padding: 80px 20px;
+  min-height: 100vh;
   color: #fff;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-family: "Poppins", sans-serif;
-  margin-top: 30vh;
-  margin-bottom: 50vh;
+  margin-top: 25vh;
+  margin-bottom: 15vh;
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;
 }
 
-.games .title {
+.videos .title {
   position: relative;
   text-align: center;
-  font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 4rem;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 3rem;
   padding-bottom: 20px;
-  font-family: "Roboto+Mono", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  line-height: 1.2;
 }
 
-.games .title::before {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 240px;
-  height: 3px;
-  background: #fff;
-  transform: translateX(-50%);
+.videos .title::before {
+  content: none; /* Completely disable the white line */
 }
 
-.games .title::after {
-  content: "Select a Game to Play";
+.videos .title::after {
+  content: "Tutorial Video Samples";
   position: absolute;
-  bottom: -14px;
+  bottom: -18px;
   left: 50%;
-  font-size: 20px;
+  font-size: 16px;
   color: #b29155;
-  padding: 5px;
+  padding: 4px 10px;
   background: #111;
   transform: translateX(-50%);
+  white-space: nowrap;
+  border-radius: 4px;
+  z-index: 1;
 }
 
-.games .games-content {
+.videos-content {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
 
-.games .games-content .card {
-  margin: 0 30px;
-  width: calc(33% - 25px);
-  background: #222;
-  text-align: center;
-  border-radius: 6px;
-  padding: 20px 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.videos-content .card {
+  background-color: rgba(34, 34, 34, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
-.games .games-content .card:hover {
+.videos-content .card:hover {
+  transform: translateY(-10px);
   background-color: #b29155;
 }
 
-.games .games-content .card .box {
-  transition: all 0.3s ease;
+.videos-content .box {
+  padding: 20px;
+  flex-grow: 1;
+  box-sizing: border-box;
 }
 
-.games .games-content .card:hover .box {
-  transform: scale(1.05);
-}
-
-.games .games-content .card:hover #games-icon {
-  color: #fff;
-}
-
-#games-icon {
-  font-size: 50px;
-  color: #b29155;
-  transition: color 0.3s ease;
-}
-
-.games .games-content a .text {
-  color: #fff;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 10px 0 7px 0;
-}
-
-.games .games-content a p {
-  color: #fff;
-}
-
-.games .button3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.games .button3 .backBtn {
-  margin: 25px 50%;
-  padding: 10px 10px;
-  height: 100%;
+.videos-content .box iframe {
+  border-radius: 8px;
   width: 100%;
-  border: 3px solid #b29155;
-  background: #b29155;
+  height: 230px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.videos-content .box .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
   color: #fff;
+}
+
+.videos-content .box p {
   font-size: 15px;
-  font-weight: 300;
-  border-radius: 50%;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.button3 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.backBtn {
+  padding: 12px 30px;
+  font-size: 16px;
+  border: 2px solid #b29155;
+  background-color: #b29155;
+  color: #fff;
+  border-radius: 40px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.games .button3 .backBtn:hover {
+.backBtn:hover {
+  background: transparent;
   color: #b29155;
-  background: none;
 }
+
+.videoBody {
+  background: url("Images/PortfolioHomeBackground.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.disclaimer {
+  font-size: 13px;
+  background: transparent;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.4;
+  font-style: italic;
+  transition: opacity 0.3s ease;
+}
+
+.disclaimerBtn {
+  padding: 12px 30px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  background-color: transparent;
+  color: crimson;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.disclaimerBtn:hover {
+  background: crimson;
+  color: #b29155;
+}
+
+.hidden {
+  display: none;
+}
+
+.disclaimer-toggle-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .videos .title {
+      font-size: 30px;
+  }
+
+  .videos .title::after {
+      font-size: 15px;
+  }
+
+  .videos-content .box iframe {
+      height: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .videos-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .videos-content .card {
+      max-width: 100%;
+  }
+
+  .videos .title {
+      font-size: 28px;
+  }
+
+  .videos .title::after {
+      font-size: 14px;
+      padding: 3px 8px;
+  }
+
+  .videos-content .box .text {
+      font-size: 17px;
+  }
+
+  .videos-content .box p {
+      font-size: 14px;
+  }
+} 
+
 
 /* ------------------------
 --------------------------- 
@@ -1565,7 +1650,6 @@ footer span a:hover {
     width: calc(80% - 5px);
     margin-bottom: 20px;
   }
-}
 
   .projects .projects-content .card {
     width: calc(80% - 5px);
