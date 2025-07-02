@@ -1,15 +1,14 @@
 // script.js — Updated for Modern Use & Page-Safe Execution
 
 // Sticky navbar on scroll
-$(document).ready(function () {
-    $(window).scroll(function () {
-        $('.navbar').toggleClass("sticky", this.scrollY > 20);
-        $('.scroll-up-button').toggleClass("show", this.scrollY > 500);
+document.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("scroll", () => {
+        document.querySelector('.navbar')?.classList.toggle("sticky", window.scrollY > 20);
+        document.querySelector('.scroll-up-button')?.classList.toggle("show", window.scrollY > 500);
     });
 
-    // Slide-up scroll button
-    $('.scroll-up-button').click(function () {
-        $('html').animate({ scrollTop: 0 });
+    document.querySelector('.scroll-up-button')?.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
 
@@ -32,12 +31,12 @@ navButton?.addEventListener('click', toggleMenu);
 menu?.addEventListener('click', toggleMenu);
 
 // Highlight menu (partially disabled for simplicity)
-const highlightMenu = () => {
-    const homeMenu = document.querySelector('#home');
-    if (window.innerWidth > 1104 && window.scrollY < 600) {
-        homeMenu?.classList.add('highlight');
-    }
-};
+// const highlightMenu = () => {
+//     const homeMenu = document.querySelector('#home');
+//     if (window.innerWidth > 1104 && window.scrollY < 600) {
+//         homeMenu?.classList.add('highlight');
+//     }
+// };
 
 // TypeWriter Effect
 class TypeWriter {
@@ -58,7 +57,7 @@ class TypeWriter {
         this.txt = this.isDeleting ? fullTxt.substring(0, this.txt.length - 1)
                                    : fullTxt.substring(0, this.txt.length + 1);
 
-        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+        this.txtElement.innerHTML = this.txt;
 
         let typeSpeed = this.isDeleting ? 37 : 75;
 
@@ -107,34 +106,26 @@ window.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("my-form");
     const status = document.getElementById("status");
 
-    if (!form || !status) return;
+    if (form) {
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
 
-    function success() {
-        form.reset();
-        status.classList.add('success');
-        status.innerHTML = "Thanks! Message successfully sent!";
+            try {
+                await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    Accept: "application/json",
+                },
+                });
+                status.textContent = "Thanks for your message!";
+                status.style.color = "green";
+                form.reset();
+            } catch (error) {
+                status.textContent = "Oops! Something went wrong.";
+                status.style.color = "red";
+            }
+        });
     }
-
-    function error() {
-        status.classList.add('error');
-        status.innerHTML = "Oops! There was a problem.";
-    }
-
-    form.addEventListener("submit", function (ev) {
-        ev.preventDefault();
-        const data = new FormData(form);
-        ajax(form.method, form.action, data, success, error);
-    });
 });
-
-function ajax(method, url, data, success, error) {
-    const xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState !== XMLHttpRequest.DONE) return;
-        xhr.status === 200 ? success(xhr.response, xhr.responseType)
-                           : error(xhr.status, xhr.response, xhr.responseType);
-    };
-    xhr.send(data);
-}
