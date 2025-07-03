@@ -1,9 +1,9 @@
 // script.js — Updated for Modern Use & Page-Safe Execution
 
-// Sticky navbar on scroll
+// Sticky navbar on scroll and scroll button
 document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", () => {
-        document.querySelector('.navbar')?.classList.toggle("sticky", window.scrollY > 20);
+//         document.querySelector('.navbar')?.classList.toggle("sticky", window.scrollY > 20);
         document.querySelector('.scroll-up-button')?.classList.toggle("show", window.scrollY > 500);
     });
 
