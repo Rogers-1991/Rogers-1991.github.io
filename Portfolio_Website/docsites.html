@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Technical Documentation Portfolio</title>
+  </head>
+  <body class="videoBody">
+    <section class="docsites" id="docsites">
+      <div class="max-width">
+        <h2 class="title">Technical Documentation Projects</h2>
+        <div class="docsites-content">
+          <div class="card">
+            <div class="box">
+              <a href="https://docs.anyline.com">
+                <div class="image-wrapper">
+                  <img
+                    src="Images/AnylineInsightsPlaceHolder.png"
+                    alt="Anyline Insights Documentation Screenshot"
+                  />
+                </div>
+                <div class="text">Anyline SDK Documentation</div>
+                <p>
+                  A comprehensive documentation portal for Anyline's scanning
+                  SDKs, maintained and partially restructured by me using Antora
+                  and Docusaurus integrations.
+                </p>
+              </a>
+            </div>
+            <div class="disclaimer-toggle-container">
+              <button id="toggleDisclaimers" class="disclaimerBtn">
+                Toggle Disclaimer
+              </button>
+            </div>
+            <p class="disclaimer hidden">
+              <em
+                >Note: This video was created by me at Anyline GmbH. All rights
+                to the content belong to Anyline. Shared here for demonstration
+                purposes only.</em
+              >
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="box">
+              <a href="https://docs-tirebuddy.anyline.com">
+                <div class="image-wrapper">
+                  <img
+                    src="Images/TireBuddyPlaceHolder.png"
+                    alt="Anyline TireBuddy Documentation Screenshot"
+                  />
+                </div>
+                <div class="text">TireBuddy</div>
+                <p>
+                  This project showcases a custom Docusaurus Technical
+                  Documentation website I designed from the ground up myself to
+                  onboard customers on how to get the most out of the Anyline
+                  TireBuddy App.
+                </p>
+              </a>
+            </div>
+            <div class="disclaimer-toggle-container">
+              <button id="toggleDisclaimers" class="disclaimerBtn">
+                Toggle Disclaimer
+              </button>
+            </div>
+            <p class="disclaimer hidden">
+              <em
+                >Note: This video was created by me at Anyline GmbH. All rights
+                to the content belong to Anyline. Shared here for demonstration
+                purposes only.</em
+              >
+            </p>
+          </div>
+
+          <!-- Add more cards as needed -->
+        </div>
+        <div class="button3">
+          <button onclick="history.go(-1)" type="button" class="backBtn">
+            Go Back
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="max-width">
+        <span
+          >Created by Colm Rogers • © 2025 |
+          <a href="index.html#about">About Me</a></span
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleButtons = document.querySelectorAll(".disclaimerBtn");
+
+        toggleButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const disclaimer = btn.closest(".card").querySelector(".disclaimer");
+            if (disclaimer) {
+              disclaimer.classList.toggle("hidden");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

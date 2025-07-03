@@ -1,75 +1,44 @@
-// Sticky navbar with scrolling function
-$(document).ready(function () {
-    $(window).scroll(function () {
-        if (this.scrollY > 20) {
-            $('.navbar').addClass("sticky");
-        } else {
-            $('.navbar').removeClass("sticky");
-        }
-        if (this.scrollY > 500) {
-            $('.scroll-up-button').addClass("show");
-        } else {
-            $('.scroll-up-button').removeClass("show");
-        }
-    })
-});
+// script.js — Updated for Modern Use & Page-Safe Execution
 
+// Sticky navbar on scroll and scroll button
+document.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("scroll", () => {
+//         document.querySelector('.navbar')?.classList.toggle("sticky", window.scrollY > 20);
+        document.querySelector('.scroll-up-button')?.classList.toggle("show", window.scrollY > 500);
+    });
 
-
-
-// SLIDE-UP SCRIPT
-$('.scroll-up-button').click(function () {
-    $('html').animate({
-        scrollTop: 0
+    document.querySelector('.scroll-up-button')?.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
 
-
-
-
-// MOBILE MENU ICON
+// Mobile Navigation Menu Toggle
 const menu = document.querySelector('#mobile-menu');
 const mobileMenu = document.querySelector('.navbar-menu');
 const navLinks = [...document.querySelectorAll('.navbar-links')];
 const navButton = document.querySelector('.button');
-const navLogo = document.querySelector('#navbar-logo');
 
 const toggleMenu = () => {
-    menu.classList.toggle('is-active');
-    mobileMenu.classList.toggle('active');
-}
+    menu?.classList.toggle('is-active');
+    mobileMenu?.classList.toggle('active');
+};
 
 navLinks.forEach((link) => {
-    link.addEventListener('click', toggleMenu);
+    link?.addEventListener('click', toggleMenu);
 });
 
-navButton.addEventListener('click', toggleMenu);
+navButton?.addEventListener('click', toggleMenu);
+menu?.addEventListener('click', toggleMenu);
 
-menu.addEventListener('click', toggleMenu);
+// Highlight menu (partially disabled for simplicity)
+// const highlightMenu = () => {
+//     const homeMenu = document.querySelector('#home');
+//     if (window.innerWidth > 1104 && window.scrollY < 600) {
+//         homeMenu?.classList.add('highlight');
+//     }
+// };
 
-const highlightMenu = () => {
-    const elem = document.querySelector('.highlight')
-    const homeMenu = document.querySelector('#home')
-    const about = document.querySelector('#about')
-    const service = document.querySelector('#project')
-    const skills = document.querySelector('#skills')
-    const qual = document.querySelector('#qualification')
-    const contact = document.querySelector('#contact')
-
-    let scrollPos = window.scrollY
-
-    // adds 'highlight' class to menu items
-    if (window.innerWidth > 1104 && scrollPos < 600) {
-        homeMenu.classList.add('highlight')
-    }
-}
-
-
-
-
-// TYPE-WRITING EFFECT
-
-// ES6 TypeWriter Class
+// TypeWriter Effect
 class TypeWriter {
     constructor(txtElement, words, wait = 1500) {
         this.txtElement = txtElement;
@@ -77,49 +46,27 @@ class TypeWriter {
         this.txt = '';
         this.wordIndex = 0;
         this.wait = parseInt(wait, 10);
-        this.type();
         this.isDeleting = false;
+        this.type();
     }
 
-    // Create a method within the class, called 'type'
     type() {
-        // Current index of word
         const current = this.wordIndex % this.words.length;
-        // Get full text of current word
         const fullTxt = this.words[current];
 
-        console.log(fullTxt);
+        this.txt = this.isDeleting ? fullTxt.substring(0, this.txt.length - 1)
+                                   : fullTxt.substring(0, this.txt.length + 1);
 
-        // Check if deleting
-        if (this.isDeleting) {
-            // Remove Character
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-            // Add Character
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+        this.txtElement.innerHTML = this.txt;
 
-        // Insert txt into element
-        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+        let typeSpeed = this.isDeleting ? 37 : 75;
 
-        // Initial Type Speed
-        let typeSpeed = 75;
-
-        if (this.isDeleting) {
-            typeSpeed /= 2;
-        }
-
-        // Check if the word is complete
         if (!this.isDeleting && this.txt === fullTxt) {
-            // Make Pause at end
             typeSpeed = this.wait;
-            // Set delete to True
             this.isDeleting = true;
         } else if (this.isDeleting && this.txt === '') {
             this.isDeleting = false;
-            // Move to the next word
             this.wordIndex++;
-            // Pause before start typing
             typeSpeed = 500;
         }
 
@@ -127,87 +74,58 @@ class TypeWriter {
     }
 }
 
-// Init on DOM Load
-document.addEventListener('DOMContentLoaded', init);
-
-// Init App
-function init() {
+document.addEventListener('DOMContentLoaded', () => {
     const txtElement = document.querySelector('.text-type');
+    if (!txtElement) return;
     const words = JSON.parse(txtElement.getAttribute('data-words'));
     const wait = txtElement.getAttribute('data-wait');
-
-    // initialise typewriter
     new TypeWriter(txtElement, words, wait);
-}
+});
 
-
-
-
-// QUALIFICATION SECTION TABS
+// Qualification Tabs Toggle
 (() => {
-    const qualSection = document.querySelector(".qualification-content"),
-        tabsContainer = document.querySelector(".qual-tabs");
+    const qualSection = document.querySelector(".qualification-content");
+    const tabsContainer = document.querySelector(".qual-tabs");
+
+    if (!qualSection || !tabsContainer) return;
 
     tabsContainer.addEventListener("click", (event) => {
-        /* if event.target contains 'tab-item' class and doesn't contain 'active' class */
         if (event.target.classList.contains("tab-item") &&
             !event.target.classList.contains("active")) {
             const target = event.target.getAttribute("data-target");
-            // deactivate existing active 'tab-item'
-            tabsContainer.querySelector(".active").classList.remove("active");
-            // activate new 'tab-item'
+            tabsContainer.querySelector(".active")?.classList.remove("active");
             event.target.classList.add("active");
-            // deactivate existing active 'tab-content'
-            qualSection.querySelector(".tab-content.active").classList.remove("active");
-            // activate new 'tab-content'
-            qualSection.querySelector(target).classList.add("active");
+            qualSection.querySelector(".tab-content.active")?.classList.remove("active");
+            qualSection.querySelector(target)?.classList.add("active");
         }
-    })
+    });
 })();
 
+// Email Form Submission
+window.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("my-form");
+    const status = document.getElementById("status");
 
+    if (form) {
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
 
-
-
-// EMAIL SECTION FUNCTIONALITY
-
-window.addEventListener("DOMContentLoaded", function () {
-    var form = document.getElementById("my-form");
-    var status = document.getElementById("status");
-
-    function success() {
-        form.reset();
-        status.classList.add('success');
-        status.innerHTML = "Thanks! Message successfully sent!";
+            try {
+                await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    Accept: "application/json",
+                },
+                });
+                status.textContent = "Thanks for your message!";
+                status.style.color = "green";
+                form.reset();
+            } catch (error) {
+                status.textContent = "Oops! Something went wrong.";
+                status.style.color = "red";
+            }
+        });
     }
-
-    function error() {
-        status.classList.add('error');
-        status.innerHTML = "Oops! There was a problem.";
-    }
-
-    // handle form submission event
-
-    form.addEventListener("submit", function (ev) {
-        ev.preventDefault();
-        var data = new FormData(form);
-        ajax(form.method, form.action, data, success, error);
-    })
 });
-
-// helper function for sending ajax request
-
-function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState !== XMLHttpRequest.DONE) return;
-        if (xhr.status === 200) {
-            success(xhr.response, xhr.responseType);
-        } else {
-            error(xhr.status, xhr.response, xhr.responseType);
-        }
-    };
-    xhr.send(data);
-}
