@@ -141,6 +141,7 @@
               >
             </p>
           </div>
+        </div>
         <div class="button3">
           <button onclick="history.go(-1)" type="button" class="backBtn">
             Go Back
@@ -152,7 +153,7 @@
     <footer>
       <div class="max-width">
         <span
-          >Created by Colm Rogers • © 2026 |
+          >Created by Colm Rogers • © 2025 |
           <a href="index.html#about">About Me</a></span
         >
       </div>
@@ -169,7 +170,9 @@
 
         toggleButtons.forEach((btn) => {
           btn.addEventListener("click", () => {
-            const disclaimer = btn.closest(".card").querySelector(".disclaimer");
+            const disclaimer = btn
+              .closest(".card")
+              .querySelector(".disclaimer");
             if (disclaimer) {
               disclaimer.classList.toggle("hidden");
             }
