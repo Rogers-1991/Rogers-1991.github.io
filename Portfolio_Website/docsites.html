@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -33,7 +33,9 @@
                 <p>
                   A comprehensive documentation portal for Anyline's scanning
                   SDKs, maintained and partially restructured by me using Antora
-                  and Docusaurus integrations.
+                  and Docusaurus integrations. (This link specifically showcases
+                  open Product Documentation I personally led, designed, wrote,
+                  and maintained entirely by myself.)
                 </p>
               </a>
             </div>
@@ -44,9 +46,9 @@
             </div>
             <p class="disclaimer hidden">
               <em
-                >Note: This video was created by me at Anyline GmbH. All rights
-                to the content belong to Anyline. Shared here for demonstration
-                purposes only.</em
+                >Note: This documentation was created and maintained by me at
+                Anyline GmbH. All rights to the content belong to Anyline.
+                Shared here for demonstration purposes only.</em
               >
             </p>
           </div>
@@ -76,9 +78,9 @@
             </div>
             <p class="disclaimer hidden">
               <em
-                >Note: This video was created by me at Anyline GmbH. All rights
-                to the content belong to Anyline. Shared here for demonstration
-                purposes only.</em
+                >Note: This documentation was created by me at Anyline GmbH. All
+                rights to the content belong to Anyline. Shared here for
+                demonstration purposes only.</em
               >
             </p>
           </div>
@@ -109,7 +111,9 @@
 
         toggleButtons.forEach((btn) => {
           btn.addEventListener("click", () => {
-            const disclaimer = btn.closest(".card").querySelector(".disclaimer");
+            const disclaimer = btn
+              .closest(".card")
+              .querySelector(".disclaimer");
             if (disclaimer) {
               disclaimer.classList.toggle("hidden");
             }
